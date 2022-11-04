@@ -47,6 +47,8 @@ class _OwnTextFieldState extends State<OwnTextField> {
           keyboardType: widget.textFieldType,
           inputFormatters: widget.hasFormater ? [maskFormatter] : [],
           decoration: InputDecoration(
+            contentPadding:
+                const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
             hintStyle: const TextStyle(),
             hintText: widget.hintTextTextField,
             prefixIcon: widget.prefixIcon,

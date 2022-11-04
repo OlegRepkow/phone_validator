@@ -43,7 +43,6 @@ class _CountriesListState extends State<CountriesList> {
           return Center(
             child: ListView(
                 children: state.countryCode.map((item) {
-              // return list.add(e);
               return InkWell(
                 onTap: () {
                   Navigator.pop(context);
@@ -55,6 +54,11 @@ class _CountriesListState extends State<CountriesList> {
               );
             }).toList()),
           );
+        } else if (state is CountryLoadingState) {
+          return const Center(
+              child: CircularProgressIndicator(
+            color: Color.fromRGBO(244, 245, 255, 0.4),
+          ));
         } else {
           return const SizedBox.shrink();
         }
