@@ -3,7 +3,7 @@ import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:phone_validator/styles/text_styles.dart';
 
 class OwnTextField extends StatefulWidget {
-  OwnTextField(
+  const OwnTextField(
       {key,
       this.hintTextTextField = '',
       this.prefixIcon,
@@ -31,7 +31,7 @@ class _OwnTextFieldState extends State<OwnTextField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 8.0, right: 15),
+      padding: const EdgeInsets.only(left: 8.0, right: 15),
       child: SizedBox(
         height: 48,
         child: TextField(
@@ -41,13 +41,13 @@ class _OwnTextFieldState extends State<OwnTextField> {
           onChanged: (value) {
             widget.editingText(controller.text);
           },
-          cursorColor: Color.fromRGBO(87, 77, 113, 1),
+          cursorColor: const Color.fromRGBO(87, 77, 113, 1),
           style: Styles.codeCoutryFont,
           controller: controller,
           keyboardType: widget.textFieldType,
           inputFormatters: widget.hasFormater ? [maskFormatter] : [],
           decoration: InputDecoration(
-            hintStyle: TextStyle(),
+            hintStyle: const TextStyle(),
             hintText: widget.hintTextTextField,
             prefixIcon: widget.prefixIcon,
             focusedBorder: const OutlineInputBorder(
