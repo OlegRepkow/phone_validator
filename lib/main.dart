@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:phone_validator/country_button.dart';
+
 import 'package:phone_validator/widgets/own_text_field.dart';
 import 'package:phone_validator/styles/text_styles.dart';
 
@@ -70,10 +71,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Row(
               children: [
-                SizedBox(
+                const SizedBox(
                   width: 25,
                 ),
-                CountryButton(),
+                const CountryButton(),
                 Expanded(
                   child: OwnTextField(
                     hasFormater: true,
@@ -85,7 +86,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         if (value.length == 14) {
                           selected();
                         } else {
-                          
                           unSelected();
                         }
                       }
@@ -104,15 +104,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   decoration: BoxDecoration(
                       color: isSelect
                           ? Colors.white
-                          : Color.fromRGBO(244, 245, 255, 0.4),
-                      borderRadius: BorderRadius.all(Radius.circular(16))),
+                          : const Color.fromRGBO(244, 245, 255, 0.4),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(16))),
                   height: 48,
                   width: 48,
                   child: Image.asset(
                     'assets/icons/right.png',
                     color: isSelect
-                        ? Color.fromRGBO(87, 77, 113, 1)
-                        : Color.fromRGBO(123, 134, 180, 1),
+                        ? const Color.fromRGBO(87, 77, 113, 1)
+                        : const Color.fromRGBO(123, 134, 180, 1),
                   ),
                   // color: Color.fromRGBO(244, 245, 255, 0.4),
                 ),
